@@ -25,7 +25,6 @@ func main() {
 
 		}()
 
-		count := 0
 		if start {
 
 			// go func() {
@@ -46,8 +45,7 @@ func main() {
 						default:
 							// x, y := robotgo.GetMousePos()
 							robotgo.Click(`left`, false)
-							count++
-							time.Sleep(1 * time.Microsecond)
+							time.Sleep(1 * time.Millisecond)
 						}
 					}
 				}()
@@ -55,6 +53,6 @@ func main() {
 
 		}
 		sw.Wait()
-		fmt.Println("停止连点", count)
+		fmt.Println("停止连点")
 	}
 }
